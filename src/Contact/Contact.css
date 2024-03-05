@@ -1,0 +1,53 @@
+.Contact-content{
+background: var(--background);
+color: var(--color);
+}
+.contact-info{
+display: grid;
+padding: 20px;
+grid-template-columns: 60% 40%;
+
+}
+.iconsize{
+    color: var(--contant);
+    font-size: 50px;
+}
+.address-box{
+
+    display: flex;
+    justify-content: start;
+    padding-left: 10%;
+flex-wrap: wrap;
+    gap: 25px;
+}
+.address-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.text-box{
+    width: 90%;
+    margin: 0px auto;
+}
+.mail-btn{
+padding-right: 50px!important;
+}
+@media screen and (max-width:768px) {
+.contact-info{
+grid-template-columns: auto;
+}
+.text-box{
+    width: 80%;
+}
+}
+@media screen and (max-width:500px) {
+.iconsize{
+    font-size: 30px;
+}
+.address-box > h3{
+    font-size: 20px;
+}
+.address-size{
+    width: 200px!important;
+}
+}

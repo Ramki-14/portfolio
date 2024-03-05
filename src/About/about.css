@@ -14,7 +14,6 @@
     padding: 10px;
     letter-spacing: 2px;
     color: var(--contant);
-    /* font-family:'Courier New', Courier, monospace; */
     font-weight: 700;
     animation: slidebottom .5s ease forwards;
     animation-delay: .2s;
@@ -188,7 +187,6 @@ letter-spacing: 2px;
     margin-right: auto;
     max-width: 600px;
 letter-spacing: 0px;
-    /* max-width: max-content!important; */
 }
 .edu-school-3>p{
 width: 90%;
@@ -252,17 +250,23 @@ border: none;
 padding: 0px 20px;
 color: var(--color);
 }
+.view-box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .certificate-1{
     object-fit: contain;
-    width: 648px;
-    height: 432px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-z-index: 100;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+   border-radius: 20px;
 transition: 1s;
-}
+} 
 .showdiv{
     display: block;
 }
@@ -270,17 +274,7 @@ transition: 1s;
     display: none;
 }
 
-.cancel{
-    position: fixed;
-    top: 25px;
-    background: transparent;
-    right: 270px;
-    border: none;
-    font-size: 20px;
-    color: var(--color);
-    z-index: 100;
 
-}
 
 .pro-box{
     width: 80%;
@@ -354,7 +348,3 @@ transition: 1s;
         transform: rotate(360deg);
     }
 }
-/* .gud{
-    height: 100vh;
-    background:rebeccapurple;
-} */

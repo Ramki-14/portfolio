@@ -16,17 +16,20 @@ import img3 from "./javascript-logo.png"
 import CertificateTwo from "./javascript.png"
 import img4 from "./react-logo-1.png"
 import img5 from "./git-logo.png"
-import CertificateThree from "./git.png"
+import CertificateThree from "./git.png";
+import CertificateFour from "./react.jpeg"
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import img6 from "./png-bootstrap.png";
 import { FaKeyboard, FaAngleDoubleRight } from "react-icons/fa";
 import { SiAdobephotoshop } from "react-icons/si";
-
+import { VscEyeClosed } from "react-icons/vsc";
 
 
 export default function About() {
 
         const [showbtn, setshowbtn]= useState(true);
+        const [showbtnOne, setshowbtnOne]= useState(true);
+
         const [showbtnTwo, setshowbtnTwo]= useState(true);
         const [showbtnThree, setshowbtnThree]= useState(true);
         const [showbtnFour, setshowbtnFour]= useState(true);
@@ -41,6 +44,9 @@ AOS.init({duration:'2000'});
  const Showbutton = ()=>{
         setshowbtn(false)
   }
+  const ShowbuttonOne = ()=>{
+        setshowbtnOne(false)
+  }
   const ShowbuttonTwo = ()=>{
         setshowbtnTwo(false)
   }
@@ -53,6 +59,9 @@ AOS.init({duration:'2000'});
 
   const Cancelbutton = ()=>{
         setshowbtn(true)
+  }
+  const CancelbuttonOne = ()=>{
+        setshowbtnOne(true)
   }
   const CancelbuttonTwo = ()=>{
         setshowbtnTwo(true)
@@ -150,7 +159,7 @@ return(
 <div className='edu-school edu-school-2' data-aos="fade-left" data-aos-anchor-placement='bottom-bottom'>
         <p><strong>FREELANCING PROJECT</strong></p>
         <p>Design Static Website For Statue Shop</p>
-        <p className='text-center'><strong>Technology Using : </strong> HTML, CSS, JS, Bootstrap </p>
+        <p><strong>Technology Using : </strong> HTML, CSS, JS, Bootstrap </p>
         <p><strong> Designing Software : </strong> Photoshop</p>
 <a href="https://www.bronzecreative.in" > www.bronzecreative.in</a>
         
@@ -180,11 +189,13 @@ return(
   labelAlignment='outside' 
   labelColor='var(--color)'
    animateOnRender={true} />
+   <div className='d-flex gap-2'>
    <button className='certificat' onClick={Showbutton}> View Certification  <GrCertificate /></button>
+<button className={`cancel certificat ${showbtn === true ? 'hidediv': 'showdiv'  }`} onClick={Cancelbutton}>Close  <VscEyeClosed /></button>
 </div>
-<div>
+</div>
+<div className='view-box'>
 <img  src={CertificateOne} className={`certificate-1 ${showbtn === true ? 'hidediv': 'showdiv'  }`}  />
-<button className={`cancel ${showbtn === true ? 'hidediv': 'showdiv'  }`} onClick={Cancelbutton}>X</button>
 </div>
 </div>
      
@@ -204,11 +215,14 @@ return(
   labelAlignment='outside' 
   labelColor='var(--color)'
    animateOnRender={true} />
-   <button className='certificat' onClick={Showbutton}> View Certification  <GrCertificate /></button>
+   <div className='d-flex gap-2'>
+
+   <button className='certificat' onClick={ShowbuttonOne}> View Certification  <GrCertificate /></button>
+<button className={`cancel certificat ${showbtnOne === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonOne}>Close   <VscEyeClosed /></button>
 </div>
-<div>
-<img  src={CertificateOne} className={`certificate-1 ${showbtn === true ? 'hidediv': 'showdiv'  }`}  />
-<button className={`cancel ${showbtn === true ? 'hidediv': 'showdiv'  }`} onClick={Cancelbutton}>X</button>
+</div>
+<div className='view-box'>
+<img  src={CertificateOne} className={`certificate-1 ${showbtnOne === true ? 'hidediv': 'showdiv'  }`}  />
 </div>
 </div>
    
@@ -228,11 +242,13 @@ return(
   labelAlignment='outside' 
   labelColor='var(--color)'
    animateOnRender={true} />
+   <div className='d-flex gap-2'>
+
    <button className='certificat' onClick={ShowbuttonTwo}> View Certification  <GrCertificate /></button>
-</div>
-<div>
+<button className={`cancel certificat ${showbtnTwo === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonTwo}> Close   <VscEyeClosed /></button>
+</div></div>
+<div className='view-box'>
 <img  src={CertificateTwo} className={`certificate-1 ${showbtnTwo === true ? 'hidediv': 'showdiv'  }`}  />
-<button className={`cancel ${showbtnTwo === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonTwo}>X</button>
 </div>
 </div>
 
@@ -252,11 +268,12 @@ return(
   labelAlignment='outside' 
   labelColor='var(--color)'
    animateOnRender={true} />
+   <div className='d-flex gap-2'>
    <button className='certificat' onClick={ShowbuttonThree}> View Certification  <GrCertificate /></button>
-</div>
-<div>
-<img  src={CertificateTwo} className={`certificate-1 ${showbtnThree === true ? 'hidediv': 'showdiv'  }`}  />
-<button className={`cancel ${showbtnThree === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonThree}>X</button>
+<button className={`cancel certificat ${showbtnThree === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonThree}> Close   <VscEyeClosed /></button>
+</div></div>
+<div className='view-box'>
+<img  src={CertificateFour} className={`certificate-1 ${showbtnThree === true ? 'hidediv': 'showdiv'  }`}  />
 </div>
 </div>
 
@@ -276,11 +293,12 @@ return(
   labelAlignment='outside' 
   labelColor='var(--color)'
    animateOnRender={true} />
+   <div className='d-flex gap-2'>
    <button className='certificat' onClick={ShowbuttonFour}> View Certification  <GrCertificate /></button>
-</div>
-<div>
+<button className={`cancel certificat ${showbtnFour === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonFour}> Close   <VscEyeClosed /></button>
+</div></div>
+<div className='view-box'>
 <img  src={CertificateThree} className={`certificate-1 ${showbtnFour === true ? 'hidediv': 'showdiv'  }`}  />
-<button className={`cancel ${showbtnFour === true ? 'hidediv': 'showdiv'  }`} onClick={CancelbuttonFour}>X</button>
 </div>
 </div>
 

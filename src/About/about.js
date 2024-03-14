@@ -159,7 +159,7 @@ return(
 <div className='edu-school edu-school-2' data-aos="fade-left" data-aos-anchor-placement='bottom-bottom'>
         <p><strong>FREELANCING PROJECT</strong></p>
         <p>Design Static Website For Statue Shop</p>
-        <p><strong>Technology Using : </strong> HTML, CSS, JS, Bootstrap </p>
+        <p className="text-center"><strong>Technology Using : </strong> HTML, CSS, JS, Bootstrap </p>
         <p><strong> Designing Software : </strong> Photoshop</p>
 <a href="https://www.bronzecreative.in" > www.bronzecreative.in</a>
         
